@@ -34,8 +34,16 @@ const CONTRACT_ABI = [
 const config = getDefaultConfig({
   clientId: import.meta.env.REACT_APP_CLIENT_ID,
   appName: 'Tomo Clicker',
-  projectId: import.meta.env.REACT_APP_PROJECT_ID,
-  chains: [mainnet]
+  projectId: "aqT9ehFEdldw7yaCQjVJmK5SAkxeUxgrDSDqH5son7sMIyj9WsQIh6kMRktfwoDTosQ8i753tnM5FgfHzC2xogR8",
+  chains: [mainnet],
+  ssr: false,
+  wallets: [
+    trustWallet,
+    metaMaskWallet,
+    coinbaseWallet,
+    okxWallet,
+    bitgetWallet
+  ] 
 });
 
 const queryClient = new QueryClient();
